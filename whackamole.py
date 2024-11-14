@@ -42,8 +42,10 @@ def main():
                         # Draw Mole Again
                         mole_rect.topleft = (x, y)
 
+            # Draw Screen
             screen.fill("light green")
-            # Draw Lines
+
+            # Draw Lines 20x16
             for i in range(0, 640, 32):
                 pygame.draw.line(screen, black, (i, 0), (i, 512), 1)
             for i in range(0, 512, 32):
@@ -51,6 +53,7 @@ def main():
 
             # Draw Mole
             screen.blit(mole_image, mole_rect)
+
             pygame.display.flip()
             clock.tick(60)
     finally:
